@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Load More Button Using HTML CSS & jQuery - Pure Coding</title>
+</head>
+<body>
+    <!-- Note: this is pretty much the same HTML structure output by WordPress" -->
+
+
+    <div class="archive">
+        <div id="content">
+    
+            <div class="post type-post status-publish format-standard hentry category-uncategorized entry">
+                <h2 class="entry-title"><a href="#">This is a blog post</a></h2> 
+                <div class="entry-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet lectus et ligula sagittis blandit a eget odio. Suspendisse auctor sollicitudin justo, accumsan volutpat neque ornare molestie. Nulla augue ligula, accumsan vitae aliquam vel, viverra a ante. Phasellus porttitor interdum eleifend. Proin ac lorem eget sem interdum congue. Aenean sodales tellus non augue condimentum, sit amet porta sapien hendrerit. Etiam gravida turpis at elit placerat aliquam. Duis mattis velit vel odio adipiscing sodales. Phasellus ac aliquet enim. Aenean quis posuere libero, sit amet convallis nisl. Vestibulum commodo tincidunt urna eu commodo. Vestibulum eleifend tempus felis, in sollicitudin odio. In lacinia hendrerit risus, elementum egestas est pretium et.</p>
+                </div><!-- end .entry-content -->
+            </div><!-- end .entry -->
+    
+            <div class="post type-post status-publish format-standard hentry category-uncategorized entry">
+                <h2 class="entry-title"><a href="#">This is a blog post</a></h2> 
+                <div class="entry-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet lectus et ligula sagittis blandit a eget odio. Suspendisse auctor sollicitudin justo, accumsan volutpat neque ornare molestie. Nulla augue ligula, accumsan vitae aliquam vel, viverra a ante. Phasellus porttitor interdum eleifend. Proin ac lorem eget sem interdum congue. Aenean sodales tellus non augue condimentum, sit amet porta sapien hendrerit. Etiam gravida turpis at elit placerat aliquam. Duis mattis velit vel odio adipiscing sodales. Phasellus ac aliquet enim. Aenean quis posuere libero, sit amet convallis nisl. Vestibulum commodo tincidunt urna eu commodo. Vestibulum eleifend tempus felis, in sollicitudin odio. In lacinia hendrerit risus, elementum egestas est pretium et.</p>
+                </div><!-- end .entry-content -->
+            </div><!-- end .entry -->
+        
+        <div class="post type-post status-publish format-standard hentry category-uncategorized entry">
+                <h2 class="entry-title"><a href="#">This is a blog post</a></h2> 
+                <div class="entry-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet lectus et ligula sagittis blandit a eget odio. Suspendisse auctor sollicitudin justo, accumsan volutpat neque ornare molestie. Nulla augue ligula, accumsan vitae aliquam vel, viverra a ante. Phasellus porttitor interdum eleifend. Proin ac lorem eget sem interdum congue. Aenean sodales tellus non augue condimentum, sit amet porta sapien hendrerit. Etiam gravida turpis at elit placerat aliquam. Duis mattis velit vel odio adipiscing sodales. Phasellus ac aliquet enim. Aenean quis posuere libero, sit amet convallis nisl. Vestibulum commodo tincidunt urna eu commodo. Vestibulum eleifend tempus felis, in sollicitudin odio. In lacinia hendrerit risus, elementum egestas est pretium et.</p>
+                </div><!-- end .entry-content -->
+            </div><!-- end .entry -->
+    
+        </div><!-- end #content -->
+    </div><!-- end .archive -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(".col").slice(0, 3).show()
+        $(".btn").on("click", function(){
+            $(".col:hidden").slice(0, 3).slideDown()
+            if ($(".col:hidden").length == 0) {
+                $(".btn").fadeOut('slow')
+            }
+        })
+    </script>
+    <script src="style.js"></script>
+
+    
+</body>
+</html>
